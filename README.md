@@ -29,3 +29,7 @@ Make sure you specify the following database settings:
 - MySQL Database: `osticket`
 - MySQL Username: `osticket`
 - MySQL Password: `osticket_pwd`
+
+### phpMyAdmin
+
+For exploring the database, you can access the phpMyAdmin container at `http://localhost:8000`.

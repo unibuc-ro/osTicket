@@ -9,6 +9,14 @@ services:
       - MYSQL_DATABASE=osticket
       - MYSQL_USER=osticket
       - MYSQL_PASSWORD=osticket_pwd
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5
+    environment:
+      - PMA_HOST=mysql
+      - PMA_USER=osticket
+      - PMA_PASSWORD=osticket_pwd
+    ports:
+      - "8000:80"
   apache:
     # Use a custom image, which has the required extensions
     build: ./docker/php/
