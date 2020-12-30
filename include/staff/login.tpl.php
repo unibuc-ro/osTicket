@@ -13,6 +13,9 @@ $info = ($_POST && $errors)?Format::htmlchars($_POST):array();
     </a></h1>
     <h3 id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
     <div class="banner"><small><?php echo ($content) ? Format::display($content->getLocalBody()) : ''; ?></small></div>
+    <?php
+    /*
+    // Disable username/password login
     <form action="login.php" method="post" id="login" onsubmit="attemptLoginAjax(event)">
         <?php csrf_token(); ?>
         <input type="hidden" name="do" value="scplogin">
@@ -30,6 +33,8 @@ $info = ($_POST && $errors)?Format::htmlchars($_POST):array();
             </button>
         </fieldset>
     </form>
+    */
+    ?>
 <?php
 $ext_bks = array();
 foreach (StaffAuthenticationBackend::allRegistered() as $bk)

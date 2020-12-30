@@ -20,7 +20,10 @@ if ($content) {
 <form action="login.php" method="post" id="clientLogin">
     <?php csrf_token(); ?>
 <div style="display:table-row">
-    <div class="login-box">
+<?php
+// Disable username and password login
+/*
+    <div class="login-box" style="display: none">
     <strong><?php echo Format::htmlchars($errors['login']); ?></strong>
     <div>
         <input id="username" placeholder="<?php echo __('Email or Username'); ?>" type="text" name="luser" size="30" value="<?php echo $email; ?>" class="nowarn">
@@ -35,6 +38,8 @@ if ($content) {
 <?php } ?>
     </p>
     </div>
+*/
+?>
     <div style="display:table-cell;padding: 15px;vertical-align:top">
 <?php
 
